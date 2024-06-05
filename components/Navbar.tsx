@@ -17,7 +17,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className=" mx-auto border sticky left-0 right-0 top-0 z-30">
+    <nav className="mx-auto border sticky left-0 right-0 top-0 z-30 bg-white bg-opacity-100">
       <div className="flex px-4 py-2 md:py-4 md:px-6 items-center justify-between">
         <Link href="/">
           <Image
