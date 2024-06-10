@@ -75,7 +75,7 @@ const Destination = ({
   )
 }
 
-const DestinationsCarousel = () => {
+const Hero = () => {
   return (
     <section className="relative flex flex-col py-10 lg:mb-10 lg:py-16 xl:mb-20 bg-white">
       <div className="padding-container max-container w-full pb-12">
@@ -124,4 +124,4 @@ const DestinationsCarousel = () => {
   )
 }
 
-export default DestinationsCarousel
+export default Hero

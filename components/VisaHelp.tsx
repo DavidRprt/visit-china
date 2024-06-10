@@ -22,7 +22,7 @@ const VisaHelp = () => {
             </p>
             <button
               type="button"
-              className="flexCenter gap-3 rounded-full border border-[#BB8378] bg-white px-8 py-3 text-black hover:bg-[#BB8378] hover:text-white"
+              className="flexCenter gap-3 rounded-full border border-[#BB8378] bg-white px-8 py-3 text-black hover:bg-[#BB8378] hover:text-white transition-colors duration-300 ease-in-out"
             >
               <label className="medium-14 whitespace-nowrap cursor-pointer">
                 More Info
