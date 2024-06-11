@@ -7,6 +7,7 @@ const EmailSection = () => {
 
   return (
     <section
+    className="mt-36"
     >
 
     </section>

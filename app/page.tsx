@@ -1,7 +1,7 @@
 import DestinationsGrid from "@/components/DestinationsGrid"
 import Hero from "@/components/Hero";
 import EmailSection from "@/components/EmailSection";
-import VisaHelp from "@/components/VisaHelp";
+import GuideSection from "@/components/GuideSection"
 import ActivitiesCarousel from "@/components/ActivitiesCarousel";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <DestinationsGrid />
       <ActivitiesCarousel />
-      <VisaHelp />
+      <GuideSection />
       <EmailSection />
     </>
   )
