@@ -32,7 +32,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.name}
-              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+              className="regular-16 text-slate-700 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
             >
               <Link href={link.href}>{link.name}</Link>
             </li>

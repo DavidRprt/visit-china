@@ -12,7 +12,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ navLinks, closeNavbar }) => {
       {navLinks.map((link) => (
         <li
           key={link.name}
-          className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold mt-1"
+          className="regular-16 text-slate-700 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold mt-1"
         >
           <Link href={link.href}>{link.name}</Link>
         </li>
