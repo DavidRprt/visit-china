@@ -110,7 +110,7 @@ export const InfiniteMovingCards = ({
                   </span>
                 </div>
                 <div className="relative z-20 mt-2 flex items-center mb-4">
-                  <button className=" px-6 py-2 bg-transparent border dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+                  <button className=" px-6 py-2 bg-transparent border dark:border-white dark:text-white text-white rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
                     More Info
                   </button>
                 </div>

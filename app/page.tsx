@@ -1,8 +1,8 @@
 import DestinationsGrid from "@/components/DestinationsGrid"
 import Hero from "@/components/Hero";
-import EmailSection from "@/components/EmailSection";
 import GuideSection from "@/components/GuideSection"
 import ActivitiesCarousel from "@/components/ActivitiesCarousel";
+import NewsCarousel from "@/components/NewsCarousel"
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <DestinationsGrid />
       <ActivitiesCarousel />
       <GuideSection />
-      <EmailSection />
+      <NewsCarousel />
     </>
   )
 }

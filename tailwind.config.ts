@@ -1,39 +1,95 @@
-const colors = require("tailwindcss/colors");
+import type { Config } from "tailwindcss"
+const colors = require("tailwindcss/colors")
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette")
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config: Config = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
-      animation: {
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      colors: {
+        primary: {
+          DEFAULT: "#94000D",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          light: "#BEA6A1",
+          dark: "#89726D",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        green: {
+          50: "#30AF5B",
+          90: "#292C27",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        "5xl": "40px",
       },
       keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
         scroll: {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
       },
-
-      colors: {
-        primary: "#94000D",
-        secondary: {
-          light: "#BEA6A1",
-          dark: "#89726D",
-        },
-        green: {
-          50: "#30AF5B",
-          90: "#292C27",
-        }
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       screens: {
         xs: "400px",
@@ -43,12 +99,9 @@ module.exports = {
       maxWidth: {
         "10xl": "1512px",
       },
-      borderRadius: {
-        "5xl": "40px",
-      },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 }
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -61,3 +114,5 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   })
 }
+
+export default config

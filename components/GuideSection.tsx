@@ -1,3 +1,4 @@
+"use client"
 import { StickyScroll } from "./ui/sticky-scroll"
 import Image from "next/image"
 

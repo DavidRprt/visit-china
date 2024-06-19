@@ -47,7 +47,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
 
   const backgroundColors = [
     "var(--secondary-light)",
-    "var(--primary)",
+    "var(--red-700)",
     "var(--secondary-dark)",
   ]
 
@@ -56,13 +56,13 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10  p-10"
+      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 p-10"
       ref={ref}
     >
       <div className="relative flex items-start px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-10">
+            <div key={item.title + index} className="my-6">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -70,7 +70,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className={`text-2xl font-bold ${item.titleColor}`}
+                className={`text-2xl font-bold ${item.titleColor} `}
               >
                 {item.title}
               </motion.h2>
@@ -100,12 +100,12 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
               )}
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-40" /> {/* Spacer to add extra padding */}
         </div>
       </div>
       <div
         className={cn(
-          "hidden lg:block h-80 w-80 rounded-md bg-white sticky top-10 overflow-hidden ",
+          "hidden lg:block h-80 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >

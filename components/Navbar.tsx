@@ -12,8 +12,8 @@ const Navbar = () => {
   const navLinks = [
     { name: "Destinations", href: "/destinations" },
     { name: "Activities", href: "/activities" },
-    { name: "Accommodation", href: "/accommodation" },
-    { name: "Visa Information", href: "/visa-information" },
+    { name: "Travel Guide", href: "/travel-guide" },
+    { name: "News", href: "/news" },
   ]
 
   return (
