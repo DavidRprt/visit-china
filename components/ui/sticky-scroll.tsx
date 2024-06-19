@@ -100,7 +100,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
               )}
             </div>
           ))}
-          <div className="h-40" /> {/* Spacer to add extra padding */}
+          <div className="md:h-40" /> {/* Spacer to add extra padding */}
         </div>
       </div>
       <div
