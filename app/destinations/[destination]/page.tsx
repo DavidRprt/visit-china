@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation"
 import { destinations } from "@/data/destinations"
-import DestinationPage from "@/components/DestinationPage"
+import DestinationPage from "@/components/destinations/DestinationPage"
 
 const Destination = () => {
   const params = useParams<{ destination: string }>()

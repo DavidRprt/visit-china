@@ -2,6 +2,7 @@ import React from "react"
 import Link from "next/link"
 
 interface DestinationCardProps {
+  id: string
   imgUrl: string
   title: string
   location: string
@@ -9,16 +10,13 @@ interface DestinationCardProps {
 }
 
 const DestinationCard: React.FC<DestinationCardProps> = ({
+  id,
   imgUrl,
   title,
   location,
   description,
 }) => {
-  const destinationPath = title
-    .toLowerCase()
-    .normalize("NFD") 
-    .replace(/[\u0300-\u036f]/g, "") 
-    .replace(/ /g, "-")
+  const destinationPath = `/destinations/${id}`
 
   return (
     <Link href={destinationPath}>

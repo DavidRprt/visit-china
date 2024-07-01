@@ -1,7 +1,8 @@
-
 interface Destination {
+  id: string
   name: string
   title: string
+  location: string
   intro: string
   whatToSee: string
   whatToDo: string
@@ -17,8 +18,10 @@ interface Destination {
 
 export const destinations: Record<string, Destination> = {
   shanghai: {
+    id: "shanghai",
     name: "Shanghai",
     title: "Discover Shanghai",
+    location: "East China",
     intro:
       "Shanghai, China's largest city and a global financial hub, is renowned for its modern skyline and historical landmarks.",
     whatToSee: "The Bund, Shanghai Tower, Yu Garden...",
@@ -34,8 +37,10 @@ export const destinations: Record<string, Destination> = {
     photo: "/destination-2.jpg",
   },
   beijing: {
+    id: "beijing",
     name: "Beijing",
     title: "Discover Beijing",
+    location: "North China",
     intro:
       "Beijing, the capital of China, is a city rich in history and culture...",
     whatToSee: "The Great Wall, Forbidden City, Summer Palace...",
@@ -50,8 +55,10 @@ export const destinations: Record<string, Destination> = {
     photo: "/beijing.jpg",
   },
   xian: {
+    id: "xian",
     name: "Xi'an",
     title: "Discover Xi'an",
+    location: "Northwest China",
     intro:
       "Xi'an, an ancient city in China, is known for its rich history and the famous Terracotta Army.",
     whatToSee: "Terracotta Army, City Wall, Big Wild Goose Pagoda...",
@@ -66,8 +73,10 @@ export const destinations: Record<string, Destination> = {
     photo: "/xian.jpg",
   },
   chengdu: {
+    id: "chengdu",
     name: "Chengdu",
     title: "Discover Chengdu",
+    location: "Southwest China",
     intro:
       "Chengdu, the capital of Sichuan province, is famous for its cuisine and the giant pandas.",
     whatToSee:
@@ -84,8 +93,10 @@ export const destinations: Record<string, Destination> = {
     photo: "/chengdu.jpg",
   },
   zhangjiajie: {
-    name: "Zhangjiajie",
-    title: "Discover Zhangjiajie",
+    id: "zhangjiajie",
+    name: "Zhangjiajie National Forest Park",
+    title: "Discover Zhangjiajie National Forest Park",
+    location: "Central China",
     intro:
       "Zhangjiajie, known for its stunning sandstone pillars, inspired the floating mountains in the movie Avatar.",
     whatToSee:
@@ -98,11 +109,13 @@ export const destinations: Record<string, Destination> = {
     bestTimeToVisit: "Spring and autumn",
     whereToEat: "Local eateries, street food, hotel dining...",
     recommendedBudget: "$60-$120 per day",
-    photo: "/zhangjiajie.jpg",
+    photo: "/zhangjiajie.jpeg",
   },
   greatwall: {
+    id: "greatwall",
     name: "Great Wall of China",
     title: "Discover The Great Wall",
+    location: "North China",
     intro:
       "The Great Wall of China, one of the Seven Wonders of the World, stretches across northern China and is a must-see landmark.",
     whatToSee: "Mutianyu, Badaling, Jinshanling sections...",

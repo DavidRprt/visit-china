@@ -1,8 +1,8 @@
-import DestinationsGrid from "@/components/DestinationsGrid"
-import Hero from "@/components/Hero";
-import GuideSection from "@/components/GuideSection"
-import ActivitiesCarousel from "@/components/ActivitiesCarousel";
-import NewsCarousel from "@/components/NewsCarousel"
+import DestinationsGrid from "@/components/home/DestinationsGrid"
+import Hero from "@/components/home/Hero";
+import GuideSection from "@/components/home/GuideSection"
+import ActivitiesCarousel from "@/components/home/ActivitiesCarousel";
+import NewsCarousel from "@/components/home/NewsCarousel"
 
 export default function Home() {
   return (
