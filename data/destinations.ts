@@ -94,7 +94,7 @@ export const destinations: Record<string, Destination> = {
   },
   zhangjiajie: {
     id: "zhangjiajie",
-    name: "Zhangjiajie National Forest Park",
+    name: "Zhangjiajie National Park",
     title: "Discover Zhangjiajie National Forest Park",
     location: "Central China",
     intro:

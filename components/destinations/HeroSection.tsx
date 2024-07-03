@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
 interface HeroSectionProps {
@@ -39,15 +39,15 @@ const HeroSection = ({
         objectFit="cover"
         className="opacity-70"
       />
-      <div className="absolute inset-0 flex items-center justify-center flex-col text-center px-1 md:px-0">
-        <h1 className="text-4xl font-bold text-slate-900 mb-2 md:mb-4">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col text-center px-1 md:px-0">
+        <h1 className="text-4xl font-bold text-white mb-2 md:mb-4 drop-shadow-lg">
           {title}
         </h1>
-        <p className="md:text-2xl text-lg mb-6 text-slate-900 font-semibold">
+        <p className="md:text-2xl text-lg mb-6 text-white font-semibold drop-shadow-lg">
           {intro}
         </p>
         <button
-          className="shadow-[inset_0_0_0_2px_#616467] text-black px-12 py-4 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200 flex items-center"
+          className="shadow-[inset_0_0_0_2px_#616467] text-white px-12 py-4 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200 flex items-center drop-shadow-lg"
           onClick={onMoreInfoClick}
         >
           More Info
