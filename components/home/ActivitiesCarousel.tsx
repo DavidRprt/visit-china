@@ -1,40 +1,8 @@
 import React from "react"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards"
+import { activities } from "@/data/activities"
 
 const ActivitiesCarousel = () => {
-const items = [
-  {
-    name: "Xi'an",
-    title: "Terracotta Warriors",
-    imgUrl: "/terracotta-warriors.jpg",
-  },
-  {
-    name: "Shanghai",
-    title: "Disneyland",
-    imgUrl: "/disney-shangai.jpeg",
-  },
-  {
-    name: "Beijing",
-    title: "Universal Studios",
-    imgUrl: "/universal-studios-beijing.jpg",
-  },
-  {
-    name: "Guilin",
-    title: "Li River Cruise",
-    imgUrl: "/li-river-cruise.jpeg",
-  },
-  {
-    name: "Beijing",
-    title: "Forbidden City",
-    imgUrl: "/forbidden-city.avif",
-  },
-  {
-    name: "Lhasa",
-    title: "Potala Palace",
-    imgUrl: "/potala-palace.jpeg",
-  },
-]
-
   return (
     <section className="padding-container pb-12 md:pb-24">
       <div className="max-container w-full pb-12 md:pb-24">
@@ -56,7 +24,7 @@ const items = [
         </div>
       </div>
       <InfiniteMovingCards
-        items={items}
+        items={activities}
         direction="left"
         speed="slow"
         pauseOnHover={true}

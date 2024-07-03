@@ -1,6 +1,8 @@
 "use client"
 import { cn } from "../../utils/cn"
 import React, { useEffect, useState } from "react"
+import { ActivityCard } from "../home/ActivityCard"
+import { ActivityItem } from "../../data/activities"
 
 export const InfiniteMovingCards = ({
   items,
@@ -9,11 +11,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: {
-    name: string
-    title: string
-    imgUrl: string
-  }[]
+  items: ActivityItem[]
   direction?: "left" | "right"
   speed?: "fast" | "normal" | "slow"
   pauseOnHover?: boolean
@@ -72,51 +70,20 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item) => (
-          <li
-            className="w-[240px] max-w-full h-[300px] relative rounded-2xl border border-b-0 flex-shrink-0 border-white px-8 py-3 md:w-[300px] flex justify-start"
-            style={{
-              backgroundImage: `url(${item.imgUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            key={item.name}
-          >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-
-              <div className="relative z-20 mt-2 flex flex-col items-start h-full justify-between">
-                <div className="flex flex-col gap-1">
-                  <span className="uppercase text-sm text-white">
-                    {item.name}
-                  </span>
-                  <span className="text-xl font-semibold text-white">
-                    {item.title}
-                  </span>
-                </div>
-                <div className="relative z-20 mt-2 flex items-center mb-4">
-                  <button className=" px-6 py-2 bg-transparent border dark:border-white dark:text-white text-white rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
-                    More Info
-                  </button>
-                </div>
-              </div>
-            </blockquote>
-          </li>
+          <ActivityCard item={item} key={item.id} />
         ))}
       </ul>
     </div>
