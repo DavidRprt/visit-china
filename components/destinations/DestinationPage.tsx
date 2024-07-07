@@ -17,17 +17,6 @@ const DestinationPage = ({ destinationData }: { destinationData: any }) => {
     }
   }
 
-  const handleContentScroll = (targetId: string) => {
-    const element = document.getElementById(targetId)
-    if (element && contentRef.current) {
-      const offset = 300
-      const yCoordinate =
-        element.getBoundingClientRect().top +
-        contentRef.current.scrollTop -
-        offset
-      contentRef.current.scrollTo({ top: yCoordinate, behavior: "smooth" })
-    }
-  }
 
   return (
     <section className="mb-8 md:mb-16 flex flex-col">
@@ -48,15 +37,12 @@ const DestinationPage = ({ destinationData }: { destinationData: any }) => {
             page={destinationData.name}
           />
         </div>
-        <div className="container flex">
+        <div>
           <DestinationContent
             destinationData={destinationData}
             contentRef={contentRef}
-            onScrollToSection={handleContentScroll}
           />
-          <div className="hidden md:block h-screen sticky top-0 md:w-1/4 right-0">
-            <ContentsIndex onScrollToSection={handleContentScroll} />
-          </div>
+         
         </div>
       </div>
     </section>
