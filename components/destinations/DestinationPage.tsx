@@ -1,3 +1,5 @@
+"use client"
+
 import { useRef } from "react"
 import HeroSection from "./HeroSection"
 import ContentsIndex from "./ContentsIndex"
@@ -17,12 +19,11 @@ const DestinationPage = ({ destinationData }: { destinationData: any }) => {
     }
   }
 
-
   return (
     <section className="mb-8 md:mb-16 flex flex-col">
       <HeroSection
-        photo={destinationData.photo}
-        title={destinationData.title}
+        photo={destinationData.image}
+        title={destinationData.name}
         intro={destinationData.intro}
         onMoreInfoClick={handleScroll}
       />
@@ -37,12 +38,12 @@ const DestinationPage = ({ destinationData }: { destinationData: any }) => {
             page={destinationData.name}
           />
         </div>
-        <div>
+        <div className="">
           <DestinationContent
             destinationData={destinationData}
             contentRef={contentRef}
+            
           />
-         
         </div>
       </div>
     </section>

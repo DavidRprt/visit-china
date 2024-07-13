@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDocumentType, makeSource } from \"contentlayer/source-files\"\n\n\nexport const Guide = defineDocumentType(() => ({\n  name: \"Guide\",\n  filePathPattern: `guides/**/*.mdx`,\n  contentType: \"mdx\",\n  fields: {\n    id: { type: \"string\", required: true },\n    name: { type: \"string\", required: true },\n    intro: { type: \"string\", required: true },\n    location: { type: \"string\", required: true },\n    language: { type: \"string\", required: true },\n    image: { type: \"string\", required: true }\n  },\n}))\n\n\nexport default makeSource({\n  contentDirPath: \"content\",\n  documentTypes: [Guide],\n})\n"],
+  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAGxC,IAAM,QAAQ,mBAAmB,OAAO;AAAA,EAC7C,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,aAAa;AAAA,EACb,QAAQ;AAAA,IACN,IAAI,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACrC,MAAM,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACvC,OAAO,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACxC,UAAU,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IAC3C,UAAU,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IAC3C,OAAO,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,EAC1C;AACF,EAAE;AAGF,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA,EAChB,eAAe,CAAC,KAAK;AACvB,CAAC;",
+  "names": []
+}

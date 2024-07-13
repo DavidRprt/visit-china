@@ -1,9 +1,9 @@
 "use client"
-import Image from "next/image"
+
 import React, { useRef } from "react"
-import DestinationCard from "./DestinationCard"
 import { motion, useInView } from "framer-motion"
-import { destinations } from "@/data/destinations" 
+import { getGuides } from "@/utils/getGuides"
+import DestinationCard from "./DestinationCard"
 
 const DestinationsGrid = () => {
   const ref = useRef(null)
@@ -13,6 +13,9 @@ const DestinationsGrid = () => {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
   }
+
+  // Obtener guías en español
+  const guides = getGuides("es")
 
   return (
     <section className="flexCenter flex-col">
@@ -38,22 +41,15 @@ const DestinationsGrid = () => {
         ref={ref}
         className="padding-container max-container w-full pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {Object.values(destinations).map((destination, index) => (
+        {guides.map((guide, index) => (
           <motion.div
-            key={destination.id}
+            key={guide.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.2, delay: index * 0.4 }}
           >
-            <DestinationCard
-              key={destination.id}
-              id={destination.id}
-              imgUrl={destination.photo}
-              title={destination.name}
-              location={destination.location}
-              description={destination.intro}
-            />
+            <DestinationCard destination={guide} />
           </motion.div>
         ))}
       </div>
