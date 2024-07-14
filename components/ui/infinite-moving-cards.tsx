@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "../../utils/cn"
+import { cn } from "../../lib/cn"
 import React, { useEffect, useState } from "react"
 import { ActivityCard } from "../home/ActivityCard"
 import { ActivityItem } from "../../data/activities"

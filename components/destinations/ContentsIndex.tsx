@@ -1,8 +1,8 @@
-import { contentsItems } from "@/data/constants"
-
 const ContentsIndex = ({
+  contentsItems,
   onScrollToSection,
 }: {
+  contentsItems: { id: string; title: string }[]
   onScrollToSection: (targetId: string) => void
 }) => {
   return (
@@ -15,7 +15,7 @@ const ContentsIndex = ({
               onClick={() => onScrollToSection(item.id)}
               className="regular-16 text-slate-700 cursor-pointer pb-1.5 transition-all hover:font-bold"
             >
-              {item.label}
+              {item.title}
             </button>
           </li>
         ))}

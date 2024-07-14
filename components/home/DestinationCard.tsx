@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import { Guide } from "@/utils/getGuides"
+import { Guide } from "@/lib/getGuides"
 
 interface DestinationCardProps {
   destination: Guide

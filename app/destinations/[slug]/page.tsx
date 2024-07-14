@@ -11,7 +11,6 @@ interface PageProps {
 
 async function getGuideFromParams(slug: string) {
   const guide = allGuides.find((guide) => guide.id === slug)
-  console.log(guide)
 
   if (!guide) {
     notFound()

@@ -28,7 +28,7 @@ export const Guide = defineDocumentType(() => ({
     language: { type: "string", required: true },
     image: { type: "string", required: true },
   },
-  computedFields
+  computedFields,
 }))
 
 export default makeSource({

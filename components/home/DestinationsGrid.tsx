@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { getGuides } from "@/utils/getGuides"
+import { getGuides } from "@/lib/getGuides"
 import DestinationCard from "./DestinationCard"
 
 const DestinationsGrid = () => {
