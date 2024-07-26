@@ -2,8 +2,9 @@
 
 import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { getGuides } from "@/lib/getGuides"
+import { getGuides } from "@/lib/getContent"
 import DestinationCard from "./DestinationCard"
+import ViewAllButton from "./ViewAllButton"
 
 const DestinationsGrid = () => {
   const ref = useRef(null)
@@ -39,7 +40,7 @@ const DestinationsGrid = () => {
       </div>
       <div
         ref={ref}
-        className="padding-container max-container w-full pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="padding-container max-container w-full pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {guides.map((guide, index) => (
           <motion.div
@@ -53,6 +54,7 @@ const DestinationsGrid = () => {
           </motion.div>
         ))}
       </div>
+      <ViewAllButton url="/articles" />
     </section>
   )
 }

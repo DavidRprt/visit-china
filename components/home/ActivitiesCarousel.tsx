@@ -1,6 +1,7 @@
 import React from "react"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards"
 import { activities } from "@/data/activities"
+import ViewAllButton from "./ViewAllButton"
 
 const ActivitiesCarousel = () => {
   return (
@@ -30,6 +31,9 @@ const ActivitiesCarousel = () => {
         pauseOnHover={true}
         className="custom-class"
       />
+      <div className="mt-5">
+        <ViewAllButton url="/activities" />
+      </div>
     </section>
   )
 }
